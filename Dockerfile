@@ -1,6 +1,6 @@
-FROM node:8.15-alpine
+FROM node:8.15-stretch
 
-RUN apk add --update --no-cache curl wget bash build-base libxml2-dev curl-dev libnsl-dev
+RUN apt-get update && apt-get install -y curl wget build-essential libxml2-dev libcurl4-openssl-dev
 
 ADD http://pegasus.isi.edu/montage/Montage_v3.3_patched_4.tar.gz /
 RUN tar zxvf Montage_v3.3_patched_4.tar.gz && \
