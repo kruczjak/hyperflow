@@ -1,5 +1,7 @@
 FROM node:8.15-alpine
 
+RUN apk add --update --no-cache curl wget bash
+
 WORKDIR /usr/src/app
 
 COPY package.json .
